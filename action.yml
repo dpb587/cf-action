@@ -3,3 +3,16 @@ description: 'Deploy Cloud Foundry applications'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+  - push
+  - -f
+  - ${{ inputs.manifest }}
+  - -p
+  - ${{ inputs.path }}
+inputs:
+  manifest:
+    required: true
+    description: "Manifest file"
+  path:
+    description: "Path to app directory or to a zip file of the contents of the app directory"
+    default: ./

@@ -5,7 +5,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install ca-certificates
 # TODO checksum/signature verify?
 RUN \
     curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=6.46.1" \
-    | tar -xzf- cf -C /usr/local/bin
+    | tar -xzf- -C /usr/local/bin cf
 
 COPY entrypoint.sh /cf.sh
 RUN chmod +x cf.sh
