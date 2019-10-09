@@ -1,0 +1,16 @@
+name: 'cf-action'
+description: 'Deploy Cloud Foundry applications'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+inputs:
+  api:
+    required: true
+  org:
+    required: true
+  space:
+    required: true
+  username:
+    required: true
+  password:
+    required: true
