@@ -12,4 +12,4 @@ cf api "$CF_API"
 cf auth
 cf target -o "$CF_ORGANIZATION" -s "$CF_SPACE"
 
-exec cf push -f "$INPUT_MANIFEST" -p "$INPUT_PATH"
+exec cf "$@"
