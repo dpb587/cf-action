@@ -1,0 +1,5 @@
+name: 'cf-action'
+description: 'Deploy Cloud Foundry applications'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
