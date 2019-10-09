@@ -12,4 +12,7 @@ cf api "$CF_API"
 cf auth
 cf target -o "$CF_ORGANIZATION" -s "$CF_SPACE"
 
-exec cf "$@"
+set -x
+
+# exec cf "$@"
+sh -c "cf $*"
